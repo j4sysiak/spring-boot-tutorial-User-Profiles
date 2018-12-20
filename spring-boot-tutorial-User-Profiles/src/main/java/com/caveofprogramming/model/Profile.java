@@ -28,6 +28,30 @@ public class Profile {
 	@Column(name="about", length=5000)
 	@Size(max=5000, message="{editprofile.about.size}")
 	private String about;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public SiteUser getUser() {
+		return user;
+	}
+
+	public void setUser(SiteUser user) {
+		this.user = user;
+	}
+
+	public String getAbout() {
+		return about;
+	}
+
+	public void setAbout(String about) {
+		this.about = about;
+	}
 	
 	
 

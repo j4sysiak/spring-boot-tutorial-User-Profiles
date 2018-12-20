@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.caveofprogramming.model.Profile;
+
 @Controller
 public class ProfileController {
 	 
@@ -17,7 +19,9 @@ public class ProfileController {
 
 		String username = auth.getName();
 		
-		modelAndView.getModel().put("message", username);
+		Profile profile = new Profile();
+		
+		modelAndView.getModel().put("profile", profile);
 		
 //		SiteUser user = getUser();
 //		Profile profile = profileService.getUserProfile(user);
@@ -35,7 +39,8 @@ public class ProfileController {
 //		
 //		modelAndView.setViewName("app.profile");
 		
-		modelAndView.setViewName("app.message");
+		modelAndView.setViewName("app.profile");
+		
 		return modelAndView;
 	}
 
