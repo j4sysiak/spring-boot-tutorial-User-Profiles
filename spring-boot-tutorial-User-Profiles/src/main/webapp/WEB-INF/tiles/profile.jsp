@@ -18,7 +18,26 @@
 			</div>
 
 			<div class="profile-text">
-  				<c:if  test="${profile.about == null}">Click</c:if >  
+  				<c:if  test="${profile.about == null}">
+  				Click 'edit' to edit your profile.
+  				
+  				Before going on to the details, let’s look at few of the important plugins and install those . 
+We are going to deal with two plugins Heroku Repo and Heroku CLI Deploy respectively.
+Let’s clean the cache and reset the app using Heroku repo.
+  				
+  				Before going on to the details, let’s look at few of the important plugins and install those . 
+We are going to deal with two plugins Heroku Repo and Heroku CLI Deploy respectively.
+Let’s clean the cache and reset the app using Heroku repo.
+  				
+  				Before going on to the details, let’s look at few of the important plugins and install those . 
+We are going to deal with two plugins Heroku Repo and Heroku CLI Deploy respectively.
+Let’s clean the cache and reset the app using Heroku repo.
+  				
+  				Before going on to the details, let’s look at few of the important plugins and install those . 
+We are going to deal with two plugins Heroku Repo and Heroku CLI Deploy respectively.
+Let’s clean the cache and reset the app using Heroku repo.
+  				
+  				</c:if >  
 			</div>
 
 		</div>
