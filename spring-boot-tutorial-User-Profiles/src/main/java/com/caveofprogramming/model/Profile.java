@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 
@@ -59,4 +60,53 @@ public class Profile {
 		}
 	}
 
+	public void safeMergeFrom(Profile webProfile /*, PolicyFactory htmlPolicy*/) {
+		
+		if(webProfile.about != null) {
+			this.about = webProfile.about;
+			//this.about = htmlPolicy.sanitize(webProfile.about);
+		}
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

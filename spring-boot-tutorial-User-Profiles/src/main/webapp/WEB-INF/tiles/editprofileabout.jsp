@@ -17,7 +17,7 @@
 			<form:form modelAttribute="profile">
 				
 				<div class="form-group">
-					<form:textarea path="text" name="text" rows="10" cols="50"></form:textarea>
+					<form:textarea path="about" name="about" rows="10" cols="50"></form:textarea>
 				</div>
 
 				<input type="submit" name="submit" value="Save" />
@@ -34,7 +34,7 @@
 <script>
 	tinymce.init({
 		selector : 'textarea',
-		plugins : "link"
+// 		plugins : "link"
 	});
 </script>
 
