@@ -10,12 +10,16 @@
 
 		<div class="panel panel-default">
 
+			<div class="errors">
+				<form:errors path="profile.about" />
+			</div>
+
 			<div class="panel-heading">
 				<div class="panel-title">Edit Your About Text</div>
 			</div>
 
 			<form:form modelAttribute="profile">
-				
+
 				<div class="form-group">
 					<form:textarea path="about" name="about" rows="10" cols="50"></form:textarea>
 				</div>
@@ -34,7 +38,7 @@
 <script>
 	tinymce.init({
 		selector : 'textarea',
-// 		plugins : "link"
+	// 		plugins : "link"
 	});
 </script>
 
