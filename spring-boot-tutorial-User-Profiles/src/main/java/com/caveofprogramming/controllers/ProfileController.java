@@ -2,6 +2,7 @@ package com.caveofprogramming.controllers;
 
 import javax.validation.Valid;
 
+import org.owasp.html.PolicyFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.auditing.config.AuditingHandlerBeanDefinitionParser;
 import org.springframework.security.core.Authentication;
@@ -25,6 +26,9 @@ public class ProfileController {
 	
 	@Autowired
 	private ProfileService profileService;
+	
+	@Autowired
+	private PolicyFactory htmlPolicy;
 	
 	private SiteUser getUser() {
 		
@@ -81,7 +85,7 @@ public class ProfileController {
 		SiteUser user = getUser();
 		Profile profile = profileService.getUserProfile(user);
 		
-		profile.safeMergeFrom(webProfile /*, htmlPolicy*/);
+		profile.safeMergeFrom(webProfile, htmlPolicy);
 		
 		if(!result.hasErrors()) {
 			profileService.save(profile);
