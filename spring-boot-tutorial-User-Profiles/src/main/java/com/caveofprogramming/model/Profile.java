@@ -53,6 +53,10 @@ public class Profile {
 		this.about = about;
 	}
 	
-	
+	public void safeCopyFrom(Profile other) {
+		if(other.about != null) {
+			this.about = other.about;
+		}
+	}
 
 }
